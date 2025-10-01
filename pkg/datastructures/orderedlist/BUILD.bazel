@@ -1,0 +1,14 @@
+load("@rules_go//go:def.bzl", "go_library", "go_test")
+
+go_library(
+    name = "orderedlist",
+    srcs = ["orderedlist.go"],
+    importpath = "github.com/faryeyay/insights/primitives/pkg/datastructures/orderedlist",
+    visibility = ["//visibility:public"],
+)
+
+go_test(
+    name = "orderedlist_test",
+    srcs = ["orderedlist_test.go"],
+    embed = [":orderedlist"],
+)

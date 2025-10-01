@@ -1,0 +1,7 @@
+.env
+*output.html
+bazel-bin*
+bazel-insights*
+bazel-out*
+bazel-testlogs*
+.psql-credentials

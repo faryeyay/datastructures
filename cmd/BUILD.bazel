@@ -1,0 +1,16 @@
+load("@rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "cmd",
+    srcs = [
+        "benchmark.go",
+        "root.go",
+    ],
+    importpath = "github.com/faryeyay/insights/primitives/cmd",
+    visibility = ["//visibility:public"],
+    deps = [
+        "//primitives/pkg/benchmark",
+        "//primitives/pkg/datastructures/testbench",
+        "@com_github_spf13_cobra//:go_default_library",
+    ],
+)

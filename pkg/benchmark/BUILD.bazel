@@ -1,0 +1,14 @@
+load("@rules_go//go:def.bzl", "go_library", "go_test")
+
+go_library(
+    name = "benchmark",
+    srcs = ["benchmark.go"],
+    importpath = "github.com/faryeyay/insights/primitives/pkg/benchmark",
+    visibility = ["//visibility:public"],
+)
+
+go_test(
+    name = "benchmark_test",
+    srcs = ["benchmark_test.go"],
+    embed = [":benchmark"],
+)

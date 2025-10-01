@@ -1,0 +1,21 @@
+load("@rules_go//go:def.bzl", "go_library", "go_test")
+
+go_library(
+    name = "bplustree",
+    srcs = [
+        "bplustree.go",
+        "node.go",
+    ],
+    importpath = "github.com/faryeyay/insights/primitives/pkg/datastructures/bplustree",
+    visibility = ["//visibility:public"],
+    deps = ["//primitives/pkg/datastructures/orderedlist"],
+)
+
+go_test(
+    name = "bplustree_test",
+    srcs = [
+        "bplustree_test.go",
+        "node_test.go",
+    ],
+    embed = [":bplustree"],
+)

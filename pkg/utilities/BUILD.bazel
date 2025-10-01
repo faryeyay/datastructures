@@ -1,0 +1,14 @@
+load("@rules_go//go:def.bzl", "go_library", "go_test")
+
+go_library(
+    name = "utilities",
+    srcs = ["utilities.go"],
+    importpath = "github.com/faryeyay/insights/primitives/pkg/utilities",
+    visibility = ["//visibility:public"],
+)
+
+go_test(
+    name = "utilities_test",
+    srcs = ["utilities_test.go"],
+    embed = [":utilities"],
+)
