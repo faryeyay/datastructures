@@ -1,0 +1,28 @@
+{
+    "image":"mcr.microsoft.com/devcontainers/go",
+    "postCreateCommand": [ "init/post-devcontainer-create.sh" ],
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "golang.go",
+                "ms-python.python",
+                "ms-python.vscode-python-envs",
+                "amazonwebservices.aws-toolkit-vscode",
+                "ms-kubernetes-tools.vscode-kubernetes-tools",
+                "redhat.vscode-yaml",
+                "TeamsDevApp.ms-teams-vscode-extension",
+                "ms-vscode-remote.remote-containers",
+                "hashicorp.terraform",
+                "continue.continue"
+            ]
+        }
+    },
+    "build": {
+            "dockerfile": "Dockerfile"
+    },
+    "remoteUser": "farye.nwede",
+    "dotfiles": {
+            "repository": "https://github.com/faryeyay/dotfiles.git",
+            "installCommand": "bash install.sh"
+    }
+}
